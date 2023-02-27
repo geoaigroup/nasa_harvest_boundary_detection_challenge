@@ -6,7 +6,7 @@ import glob
 import random
 
 SEED = 911
-K = 5
+K = 4
 
 img_dir = '/home/hasann/Desktop/geogroup/competition_datasets/nasa_rwanda_field_boundary_competition/train_imgs'
 random.seed(SEED)
