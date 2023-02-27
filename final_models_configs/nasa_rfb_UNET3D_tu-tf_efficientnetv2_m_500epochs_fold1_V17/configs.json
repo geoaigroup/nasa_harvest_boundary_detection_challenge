@@ -1,0 +1,254 @@
+{
+   "train_tfm": {
+      "__version__": "1.1.0",
+      "transform": {
+         "__class_fullname__": "Compose",
+         "p": 1.0,
+         "transforms": [
+            {
+               "__class_fullname__": "Resize",
+               "always_apply": false,
+               "p": 1.0,
+               "height": 256,
+               "width": 256,
+               "interpolation": 2
+            },
+            {
+               "__class_fullname__": "VerticalFlip",
+               "always_apply": false,
+               "p": 0.5
+            },
+            {
+               "__class_fullname__": "HorizontalFlip",
+               "always_apply": false,
+               "p": 0.5
+            },
+            {
+               "__class_fullname__": "RandomRotate90",
+               "always_apply": false,
+               "p": 0.5
+            },
+            {
+               "__class_fullname__": "Compose",
+               "p": 1.0,
+               "transforms": [
+                  {
+                     "__class_fullname__": "Resize",
+                     "always_apply": false,
+                     "p": 1.0,
+                     "height": 256,
+                     "width": 256,
+                     "interpolation": 2
+                  },
+                  {
+                     "__class_fullname__": "PadIfNeeded",
+                     "always_apply": false,
+                     "p": 1,
+                     "min_height": 320,
+                     "min_width": 320,
+                     "pad_height_divisor": null,
+                     "pad_width_divisor": null,
+                     "border_mode": 0,
+                     "value": [
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                     ],
+                     "mask_value": -100
+                  }
+               ],
+               "bbox_params": null,
+               "keypoint_params": null,
+               "additional_targets": {
+                  "image_03": "image",
+                  "image_04": "image",
+                  "image_08": "image",
+                  "image_10": "image",
+                  "image_11": "image",
+                  "image_12": "image"
+               }
+            }
+         ],
+         "bbox_params": null,
+         "keypoint_params": null,
+         "additional_targets": {
+            "image_03": "image",
+            "image_04": "image",
+            "image_08": "image",
+            "image_10": "image",
+            "image_11": "image",
+            "image_12": "image"
+         }
+      }
+   },
+   "test_tfm": {
+      "__version__": "1.1.0",
+      "transform": {
+         "__class_fullname__": "Compose",
+         "p": 1.0,
+         "transforms": [
+            {
+               "__class_fullname__": "Resize",
+               "always_apply": false,
+               "p": 1.0,
+               "height": 256,
+               "width": 256,
+               "interpolation": 2
+            },
+            {
+               "__class_fullname__": "PadIfNeeded",
+               "always_apply": false,
+               "p": 1,
+               "min_height": 320,
+               "min_width": 320,
+               "pad_height_divisor": null,
+               "pad_width_divisor": null,
+               "border_mode": 0,
+               "value": [
+                  -1,
+                  -1,
+                  -1,
+                  -1
+               ],
+               "mask_value": -100
+            }
+         ],
+         "bbox_params": null,
+         "keypoint_params": null,
+         "additional_targets": {
+            "image_03": "image",
+            "image_04": "image",
+            "image_08": "image",
+            "image_10": "image",
+            "image_11": "image",
+            "image_12": "image"
+         }
+      }
+   },
+   "resize": 256,
+   "pad": true,
+   "padsize": 320,
+   "model_name": "UNET3D",
+   "random_rotate": {
+      "apply": false,
+      "proba": 0.5,
+      "angle": 20
+   },
+   "random_mask_ignore": {
+      "apply": true,
+      "proba": 0.8,
+      "min_width": 80,
+      "max_width": 150
+   },
+   "mask_pixel_drop": {
+      "apply": false,
+      "neg_drop": [
+         30,
+         50
+      ],
+      "pos_drop": [
+         30,
+         50
+      ]
+   },
+   "model": {
+      "tsteps": 6,
+      "conv3d_mode": "conv3d_pc",
+      "kernel_3d": 3,
+      "dropout": 0.5,
+      "ch_mul": 1,
+      "group_norm": true,
+      "group_norm_channels": 4,
+      "replace_all_norms": false,
+      "sa_att": true,
+      "use_relu": true,
+      "use_aspp": false,
+      "sep_aspp": true,
+      "dense_aspp": false,
+      "atrous_rates": [
+         6,
+         12,
+         18
+      ],
+      "encoder_name": "tu-tf_efficientnetv2_m",
+      "encoder_depth": 5,
+      "encoder_weights": true,
+      "decoder_use_batchnorm": true,
+      "decoder_channels": [
+         256,
+         128,
+         64,
+         64,
+         32
+      ],
+      "decoder_attention_type": null,
+      "in_channels": 4,
+      "classes": 1,
+      "activation": null,
+      "aux_params": null
+   },
+   "optimizer": {
+      "name": "Adam",
+      "kwargs": {
+         "lr": 0.001,
+         "betas": [
+            0.9,
+            0.99
+         ],
+         "eps": 1e-08,
+         "weight_decay": 0.0001,
+         "amsgrad": false
+      }
+   },
+   "scheduler": {
+      "name": "polylrwwp",
+      "kwargs": {
+         "warmup": 0,
+         "epochs": 500,
+         "ratio": 0.9
+      }
+   },
+   "loss": {
+      "alpha": 1.0,
+      "beta": 1.0,
+      "gamma": 0.0,
+      "pos_weight": 1.0,
+      "dice_fn_w": 0.5,
+      "use_focal": false,
+      "bce_per_img": false,
+      "use_chole": 0,
+      "chole_weight": 1.0
+   },
+   "dataset": {
+      "root": "/home/hasann/Desktop/geogroup/competition_datasets/nasa_rwanda_field_boundary_competition",
+      "folds_path": "/home/hasann/Desktop/geogroup/competitions/nasa_rwanda_field_boundary_competition/folds.csv",
+      "fold": 1,
+      "months": [
+         "03",
+         "04",
+         "08",
+         "10",
+         "11",
+         "12"
+      ],
+      "resize": null,
+      "smooth_mask": false,
+      "include_nir": true
+   },
+   "training": {
+      "activation": "sigmoid",
+      "epochs": 500,
+      "lr": 0.001,
+      "batch_size": 6,
+      "val_batch_size": 1,
+      "accumulation_steps": 1,
+      "val_freq": 5,
+      "device": "cuda",
+      "amp": false,
+      "max_grad_norm": 3.0,
+      "use_mixup": true,
+      "double_mixup": true
+   },
+   "save_dir": "./results_folds_new/nasa_rfb_UNET3D_tu-tf_efficientnetv2_m_500epochs_fold1_V17"
+}
