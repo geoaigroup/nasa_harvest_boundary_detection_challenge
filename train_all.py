@@ -30,7 +30,7 @@ if __name__ == '__main__':
     arg = parser.add_argument
 
     arg('--configs_dir',type=str,default='./final_models_configs')
-    arg('--out_dir',type=str,default='./final_models2')
+    arg('--out_dir',type=str,default='./final_models')
     arg('--data_dir',type=str,\
         default='/home/hasann/Desktop/geogroup/competition_datasets/nasa_rwanda_field_boundary_competition')
     arg('--folds_path',type=str,default='./folds.csv')
