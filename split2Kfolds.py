@@ -28,7 +28,7 @@ def main():
     df = pd.DataFrame(df)
     print(df)
     print(df['fold'].value_counts())
-    df.to_csv('folds5.csv',index=False)
+    df.to_csv('folds.csv',index=False)
 
 if __name__ =='__main__':
     main()
