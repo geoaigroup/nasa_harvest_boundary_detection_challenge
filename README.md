@@ -47,6 +47,8 @@ $ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final
 ```
 The trained models weights are saved inside a new directory **final_models**
 
+### To Download our final pretrained models
+The final models weights can be found in this link : [Model Weights](https://drive.google.com/drive/folders/1QFk31V9-P7Gf6nkREuD8a6af3nt6XYeG?usp=share_link)
 ### To Run inference on the test set and create a final submission
 ```bash 
 $ python3 ensemble_submission.py --input_dir './final_models' --data_dir './data'
@@ -66,3 +68,4 @@ This will create a **final_submission.csv** file to be submitted to reproduce ou
 * [Matplotlib](https://github.com/matplotlib/matplotlib)
 * [OpenCv](https://github.com/opencv/opencv-python)
 * [Tqdm](https://github.com/tqdm/tqdm)
+* [Einops](https://github.com/arogozhnikov/einops)
