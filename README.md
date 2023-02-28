@@ -16,15 +16,15 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
  1. Download the train images, train labels and test images of this challenge and extract them in the /data folder
  2. The data folder now should look like this : 
     /data : 
-          - nasa_rwanda_field_boundary_competition_source_train
-          - nasa_rwanda_field_boundary_competition_labels_train
-          - nasa_rwanda_field_boundary_competition_source_test
+          > nasa_rwanda_field_boundary_competition_source_train
+          > nasa_rwanda_field_boundary_competition_labels_train
+          > nasa_rwanda_field_boundary_competition_source_test
  3. Rename the folders to 'train_imgs', 'train_labels' and 'test_imgs'
  4. The data folder now should look like this : 
     /data : 
-          - train_imgs
-          - train_labels
-          - test_imgs
+          > train_imgs
+          > train_labels
+          > test_imgs
           
 
 ### To Train our models from scratch
