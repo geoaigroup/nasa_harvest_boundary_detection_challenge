@@ -15,18 +15,21 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
 ### [Download the Data](https://mlhub.earth/data/nasa_rwanda_field_boundary_competition)
  1. Download the train images, train labels and test images of this challenge and extract them in the /data folder
  2. The data folder now should look like this : 
+    '''
     /data 
     |______ nasa_rwanda_field_boundary_competition_source_train
     |______ nasa_rwanda_field_boundary_competition_labels_train
     |______ nasa_rwanda_field_boundary_competition_source_test
-    
+    '''
  3. Rename the folders to 'train_imgs', 'train_labels' and 'test_imgs'
  
  4. The data folder now should look like this : 
+    '''
     /data
     |______ train_imgs
     |______ train_labels
     |______ test_imgs
+    '''
           
 
 ### To Train our models from scratch
