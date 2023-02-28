@@ -1,4 +1,4 @@
-### [Nasa Harvest Boundary Detection Challenge 4th Place Solution](https://zindi.africa/competitions/nasa-harvest-field-boundary-detection-challenge)
+### *[Nasa Harvest Boundary Detection Challenge 4th Place Solution](https://zindi.africa/competitions/nasa-harvest-field-boundary-detection-challenge)
 <img
   src="/media/plot_visual.png"
   alt=""
@@ -9,7 +9,7 @@ This is the 4th place solution for NASA Harvest Field Boundary Detection Challen
 In this challenge, the goal was to classify crop field boundaries using multispectral observations collected by PlanetScope. 
 The hardest part of this challenge was the small amount of training data (57 images), and the fact that crop fields whose boundaries does not completely fall within the range of the image are left unlabelled.
 
-### Our Final Approach 
+### *Our Final Approach 
 In a nutshell, we tried several ideas, but here is a list of the things that worked best:
  1. Unet-Like encoder/decoder architecture with 3D-convolutions at the out encoder blocks. Given a time-series of images, each image is processed alone in the encoder. The features from every block for all images in a time-series are then stacked together and a 3D convolution is applied to transform from 3D to 2D. These transformed features are then processed normally by the decoder.
  2. Encoders used : EfficientNetV2_S - EfficientNetV2_M - EfficientNetV2_B2 - SKResnet34
@@ -21,7 +21,7 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
  8. Noise Removal.
  9. Test Time Augmentations(V/H Flips and 180 degree rotate)
 
-### [Download the Data](https://mlhub.earth/data/nasa_rwanda_field_boundary_competition)
+### *[Download the Data](https://mlhub.earth/data/nasa_rwanda_field_boundary_competition)
  1. Download the train images, train labels and test images of this challenge and extract them in the /data folder
  2. The data folder now should look like this :
 ``` 
@@ -41,20 +41,20 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
 ```
           
 
-### To Train our models from scratch
+### *To Train our models from scratch
 ```bash 
 $ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final_models' --data_dir './data' --folds_path './folds.csv'
 ```
 The trained models weights are saved inside a new directory **final_models**
 
-### To Run inference on the test set and create a final submission
+### *To Run inference on the test set and create a final submission
 ```bash 
 $ python3 ensemble_submission.py --input_dir './final_models' --data_dir './data'
 ```
 This will create a **final_submission.csv** file to be submitted to reproduce our results.
 
 
-### Dependencies
+### *Dependencies
 * [Pytorch/TorchVision](https://github.com/pytorch/pytorch)
 * [Segmentation_models_pytorch](https://github.com/qubvel/segmentation_models.pytorch)
 * [Albumentations](https://albumentations.ai/docs/getting_started/installation/)
