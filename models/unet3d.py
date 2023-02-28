@@ -275,7 +275,7 @@ class Unet3D(Unet):
         
         if ch_mul > 1:
             del self.decoder
-            from segmentation_models_pytorch.unet.decoder import UnetDecoder
+            from segmentation_models_pytorch.decoders.unet.decoder import UnetDecoder
 
             self.decoder = UnetDecoder(
                 encoder_channels=self.out_3d_channels,
