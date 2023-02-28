@@ -1,4 +1,4 @@
-### [Nasa Harvest Boundary Detection Challenge 4th Place Solution](https://zindi.africa/competitions/nasa-harvest-field-boundary-detection-challenge)
+### [Nasa Harvest Boundary Detection Challenge](https://zindi.africa/competitions/nasa-harvest-field-boundary-detection-challenge) : 4th Place Solution
 <img
   src="/media/plot_visual.png"
   alt=""
