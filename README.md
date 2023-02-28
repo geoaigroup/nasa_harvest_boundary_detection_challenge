@@ -36,15 +36,13 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
           
 
 ### To Train our models from scratch
-```
-bash 
+```bash 
 $ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final_models' --data_dir './data' --folds_path './folds.csv'
 ```
 The trained models weights are saved inside a new directory './final_models'
 
 ### To Run inference on the test set and create a final submission
-```
-bash 
+```bash 
 $ python3 ensemble_submission.py --input_dir './final_models' --data_dir './data'
 ```
 This will create a final_submission.csv file to be submitted to reproduce our results.
