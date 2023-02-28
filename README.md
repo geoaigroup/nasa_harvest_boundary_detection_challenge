@@ -19,7 +19,9 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
     |______ nasa_rwanda_field_boundary_competition_source_train
     |______ nasa_rwanda_field_boundary_competition_labels_train
     |______ nasa_rwanda_field_boundary_competition_source_test
+    
  3. Rename the folders to 'train_imgs', 'train_labels' and 'test_imgs'
+ 
  4. The data folder now should look like this : 
     /data
     |______ train_imgs
