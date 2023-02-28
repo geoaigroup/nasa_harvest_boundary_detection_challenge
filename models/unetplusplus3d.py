@@ -218,9 +218,9 @@ class UnetPlusPlus3D(UnetPlusPlus):
         
         if ch_mul > 1:
             del self.decoder
-            from segmentation_models_pytorch.unet.decoder import UnetDecoder
+            from segmentation_models_pytorch.decoders.unet.decoder import UnetPlusPlusDecoder
 
-            self.decoder = UnetDecoder(
+            self.decoder = UnetPlusPlusDecoder(
                 encoder_channels=self.out_3d_channels,
                 decoder_channels=decoder_channels,
                 n_blocks=kwargs['encoder_depth'],
