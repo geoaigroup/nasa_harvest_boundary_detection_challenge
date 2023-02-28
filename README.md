@@ -1,4 +1,10 @@
 ### [Nasa Harvest Boundary Detection Challenge](https://zindi.africa/competitions/nasa-harvest-field-boundary-detection-challenge)
+<img
+  src="/media/plot_visual.png"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
+  
 This is the 4th place solution for NASA Harvest Field Boundary Detection Challenge on Zindi.
 In this challenge, the goal was to classify crop field boundaries using multispectral observations collected by PlanetScope. 
 The hardest part of this challenge was the small amount of training data (57 images), and the fact that crop fields whose boundaries does not completely fall within the range of the image are left unlabelled.
