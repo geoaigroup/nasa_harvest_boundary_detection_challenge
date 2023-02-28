@@ -39,11 +39,24 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
 ```bash 
 $ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final_models' --data_dir './data' --folds_path './folds.csv'
 ```
-The trained models weights are saved inside a new directory './final_models'
+The trained models weights are saved inside a new directory **final_models**
 
 ### To Run inference on the test set and create a final submission
 ```bash 
 $ python3 ensemble_submission.py --input_dir './final_models' --data_dir './data'
 ```
-This will create a final_submission.csv file to be submitted to reproduce our results.
+This will create a **final_submission.csv** file to be submitted to reproduce our results.
 
+
+### Dependencies
+ 1. [Pytorch/TorchVision](https://github.com/pytorch/pytorch)
+ 2. [Segmentation_models_pytorch](https://github.com/qubvel/segmentation_models.pytorch)
+ 3. [Albumentations](https://albumentations.ai/docs/getting_started/installation/)
+ 4. [Scikit-image](https://github.com/scikit-image/scikit-image)
+ 5. [Rasterio](https://github.com/rasterio/rasterio)
+ 6. [Scipy](https://github.com/scipy/scipy)
+ 7. [Pandas](https://github.com/pandas-dev/pandas)
+ 8. [Numpy](https://github.com/numpy/numpy)
+ 9. [Matplotlib](https://github.com/matplotlib/matplotlib)
+ 10. [OpenCv](https://github.com/opencv/opencv-python)
+ 11. [Tqdm](https://github.com/tqdm/tqdm)
