@@ -5,7 +5,7 @@
   title="Model Output"
   style="display: inline-block; margin: 0 auto; max-width: 600px">
   
-This is the 4th place solution for NASA Harvest Field Boundary Detection Challenge on Zindi.
+This is the 4th place solution for [NASA Harvest Field Boundary Detection Challenge](https://zindi.africa/competitions/nasa-harvest-field-boundary-detection-challenge) on [Zindi](https://zindi.africa).
 In this challenge, the goal was to classify crop field boundaries using multispectral observations collected by PlanetScope. 
 The hardest part of this challenge was the small amount of training data (57 images), and the fact that crop fields whose boundaries does not completely fall within the range of the image are left unlabelled.
 
@@ -40,21 +40,20 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
 |______ test_imgs
 ```
           
-
-### :rocket: To Train our models from scratch
-```bash 
-$ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final_models' --data_dir './data' --folds_path './folds.csv'
-```
-The trained models weights are saved inside a new directory **final_models**
-
-### :rocket: To Download our final pretrained models
+### :rocket: [To Download our final pretrained models](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
 The final models weights can be found in this link : [Model Weights](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
 ### :rocket: To Run inference on the test set and create a final submission
 ```bash 
 $ python3 ensemble_submission.py --input_dir './final_models' --data_dir './data'
 ```
-This will create a **final_submission.csv** file to be submitted to reproduce our results.
+This will create a `**final_submission.csv**` file to be submitted to reproduce our results.
 
+### :boom: Check more details about how to run inference with this colab notebook `colab_demo_run.ipynb`
+### :rocket: To Train our models from scratch
+```bash 
+$ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final_models' --data_dir './data' --folds_path './folds.csv'
+```
+The trained models weights are saved inside a new directory `**final_models**`
 
 ### :rocket: Dependencies
 * [Pytorch/TorchVision](https://github.com/pytorch/pytorch)
