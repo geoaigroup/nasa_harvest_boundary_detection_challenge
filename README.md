@@ -45,7 +45,7 @@ The final models weights can be found in this link : [Model Weights](https://dri
 
 ### :rocket: To Run inference on the test set and create a final submission
 ```bash 
-$ python3 ensemble_submission.py --input_dir '/final_pretrained_model_weights_directory' --data_dir './data --save_file './geoai_final_submission.csv'
+$ python3 ensemble_submission.py --input_dir '/final_pretrained_model_weights_directory' --data_dir './data' --save_file './geoai_final_submission.csv'
 ```
 This will create a `**geoai_final_submission.csv**` file to be submitted to reproduce our results.
 
