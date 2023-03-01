@@ -48,7 +48,7 @@ $ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final
 The trained models weights are saved inside a new directory **final_models**
 
 ### :rocket: To Download our final pretrained models
-The final models weights can be found in this link : [Model Weights](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=share_link)
+The final models weights can be found in this link : [Model Weights](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
 ### :rocket: To Run inference on the test set and create a final submission
 ```bash 
 $ python3 ensemble_submission.py --input_dir './final_models' --data_dir './data'
