@@ -42,6 +42,10 @@ def get_model(model_name):
 
 def load_trained_model(path,use_last_model=False):
     cfg = json.load(open(f'{path}/configs.json'))
+    
+    if 'encoder_weights' in cfg['model'].keys():
+        cfg['model']['encoder_weights'] = None
+
     model = get_model(cfg['model_name'])(**cfg['model'])
     
     if use_last_model:
