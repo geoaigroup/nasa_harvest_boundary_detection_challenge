@@ -21,7 +21,7 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
  8. Noise Removal.
  9. Test Time Augmentations(V/H Flips and 180 degree rotate)
 
-### [Download the Data](https://mlhub.earth/data/nasa_rwanda_field_boundary_competition)
+### :rocket: [Download the Data](https://mlhub.earth/data/nasa_rwanda_field_boundary_competition)
  1. Download the train images, train labels and test images of this challenge and extract them in the /data folder
  2. The data folder now should look like this :
 ``` 
