@@ -40,8 +40,17 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
 |______ test_imgs
 ```
           
-### :rocket: [To Download our final pretrained models](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
-The final models weights can be found in this link : [Model Weights](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
+### :rocket: To Download our final pretrained models
+The final models weights can be found here : 
+ * [Google Drive](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
+ * [GCP Bucket](https://console.cloud.google.com/storage/browser/nasa_harvest_boundary_detection_challenge)
+ 
+You can download the model weights to a google colab notebook by using the following lines of code
+```python
+from google.colab import auth
+auth.authenticate_user()
+!gsutil -m cp -r gs://nasa_harvest_boundary_detection_challenge/nasa_rwanda_field_boundary_competition_final_weights/ /content/
+```
 
 ### :rocket: To Run inference on the test set and create a final submission
 ```bash 
