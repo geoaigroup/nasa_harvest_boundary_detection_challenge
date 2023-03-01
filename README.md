@@ -58,7 +58,7 @@ $ python3 ensemble_submission.py --input_dir '/final_pretrained_model_weights_di
 ```
 This will create a `**geoai_final_submission.csv**` file to be submitted to reproduce our results.
 
-### :boom: Check more details about how to run inference with this colab notebook `colab_demo_run.ipynb`
+### :boom: Check more details about how to run inference with this colab notebook [`colab_demo_run.ipynb`](https://colab.research.google.com/github/geoaigroup/nasa_harvest_boundary_detection_challenge/blob/main/colab_demo_run.ipynb)
 
 ### :rocket: To Train our models from scratch
 ```bash 
