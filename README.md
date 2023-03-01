@@ -42,13 +42,15 @@ In a nutshell, we tried several ideas, but here is a list of the things that wor
           
 ### :rocket: [To Download our final pretrained models](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
 The final models weights can be found in this link : [Model Weights](https://drive.google.com/drive/folders/16fM7JuLNvbqeJGeNf4o2y_Fyo0KV1wD0?usp=sharing)
+
 ### :rocket: To Run inference on the test set and create a final submission
 ```bash 
-$ python3 ensemble_submission.py --input_dir '/final_pretrained_model_weights_directory' --data_dir './data'
+$ python3 ensemble_submission.py --input_dir '/final_pretrained_model_weights_directory' --data_dir './data --save_file './geoai_final_submission.csv''
 ```
-This will create a `**final_submission.csv**` file to be submitted to reproduce our results.
+This will create a `**geoai_final_submission.csv**` file to be submitted to reproduce our results.
 
 ### :boom: Check more details about how to run inference with this colab notebook `colab_demo_run.ipynb`
+
 ### :rocket: To Train our models from scratch
 ```bash 
 $ python3 train_all.py --configs_dir './final_models_configs' --out_dir './final_models' --data_dir './data' --folds_path './folds.csv'
