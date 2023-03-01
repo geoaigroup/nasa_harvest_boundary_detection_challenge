@@ -44,8 +44,11 @@ def inference(root,models,pad_sizes,resize_sizes,device='cuda',hr_idxs=None):
 
     data_orig = torch.stack(data,dim=0)
     preds = []
+    
+    tqdm_models = tqdm(models)
+    tqdm_models.set_description_str('Running Inference...')
 
-    for mid,model in enumerate(tqdm(models)):
+    for mid,model in enumerate(tqdm_models):
         preds_tta = [] 
         data = resize_pad(data_orig,padsize=pad_sizes[mid],resize=resize_sizes[mid],pad_value=-1)        
         model.to(device=device)
@@ -158,3 +161,4 @@ if __name__ == '__main__':
     ####Save Submission csv ####
     sub = pd.concat(dfs)
     sub.to_csv(save_file, index = False)
+    print(f'Finished. Submission saved to {save_file}')
