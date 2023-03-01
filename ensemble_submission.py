@@ -93,12 +93,16 @@ if __name__ == '__main__':
     arg('--input_dir',type=str,default='./final_models')
     arg('--data_dir',type=str,\
         default='/home/hasann/Desktop/geogroup/competition_datasets/nasa_rwanda_field_boundary_competition')
+    arg('--save_file',type=str,default='')
 
     args = parser.parse_args()
 
     models_dir = args.input_dir 
     data_dir = args.data_dir
-
+    save_file = args.save_file
+    if not save_file.endswith('.csv'):
+        save_file = './final_submission.csv'
+    
     ### LOAD Models Weights ####
     model_paths = [os.path.join(models_dir,f) for f in os.listdir(models_dir) if f not in ignored_models]
 
@@ -151,7 +155,6 @@ if __name__ == '__main__':
         ftd = ftd[['tile_row_column', 'label']]
         dfs.append(ftd)
 
-    ####Save Submissio csv ####
+    ####Save Submission csv ####
     sub = pd.concat(dfs)
-    sub.to_csv(f'./final_submission.csv', index = False)
-    #print(sub['label'].value_counts())
+    sub.to_csv(save_file, index = False)
